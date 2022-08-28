@@ -34,13 +34,13 @@ def parse_args():
     parser.add_argument(
         '-n',
         '--name',
-        help='Specify the name of generated image (default is untitled))',
+        help='Specify the name of generated image (default is untitled)',
         type=str
     )
     parser.add_argument(
         '-t',
         '--image_type',
-        help='Specify the type of generated image (default is png))',
+        help='Specify the type of generated image (default is png)',
         type=Path
     )
 
