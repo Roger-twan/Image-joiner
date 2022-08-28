@@ -8,7 +8,7 @@ Parameters specifications
 | parameter | full parameter | description |
 | --- | --- | --- |
 | file paths | - | Image paths or directory (default is [PosixPath('~/Downloads')]) |
-| -h | --help | show help message |
+| -h | --help | Show help message |
 | -d | --direction | {v,h,both} v for vertical, h for horizontal (default is 'both') |
 | -c | --crop | Crop each image from left, top, right, bottom (default is 0,0,0,120) |
 | -dest | - | Specify the direction of generated image (default is PosixPath('~/Downloads'))
