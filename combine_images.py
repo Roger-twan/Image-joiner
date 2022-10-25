@@ -72,7 +72,7 @@ def combine_vertical_images(images: List) -> Image:
 
 def save_image(image: Image, dest: Path, name: str, image_type: str, direction: str):
     _dest_path = re.sub('^~', str(Path.home()), str(dest))
-    _image_path = f'{_dest_path}/{name}-{direction}.{image_type}'
+    _image_path = f'{_dest_path}/{name} - {direction}.{image_type}'
     _final_path = check_generate_file_name(_image_path)
 
     print(colored('Generating image...', 'blue'))
