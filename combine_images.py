@@ -47,7 +47,7 @@ def combine_horizontal_images(images: List) -> Image:
     _total_width = sum(_widths)
     _max_height = max(_heights)
 
-    _new_img = Image.new('RGB', (_total_width, _max_height))
+    _new_img = Image.new('RGB', (_total_width, _max_height), (255, 255, 255))
     _x_offset = 0
     for img in images:
         _new_img.paste(img, (_x_offset, 0))
@@ -61,7 +61,7 @@ def combine_vertical_images(images: List) -> Image:
     _max_width = max(_widths)
     _total_height = sum(_heights)
 
-    _new_img = Image.new('RGB', (_max_width, _total_height))
+    _new_img = Image.new('RGB', (_max_width, _total_height), (255, 255, 255))
     _y_offset = 0
     for img in images:
         _new_img.paste(img, (0, _y_offset))
