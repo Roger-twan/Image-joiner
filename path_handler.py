@@ -30,7 +30,7 @@ def check_path(paths: List[PosixPath]) -> List[PosixPath]:
 
 
 def find_image_files(paths: List[PosixPath]) -> List[PosixPath]:
-    SUPPORTED_IMAGE_TYPES = ['.png', '.jpg', '.jpeg', '.gif']
+    SUPPORTED_IMAGE_TYPES = ['png', 'jpg', 'jpeg', 'gif', 'webp']
     _result = []
 
     if (len(paths) == 1):
@@ -38,7 +38,7 @@ def find_image_files(paths: List[PosixPath]) -> List[PosixPath]:
             sys.exit(colored('A single file doesn\'t need to be combined', 'red'))
         elif (paths[0].is_dir()):
             for file in os.listdir(paths[0]):
-                if (not file.startswith('.') and Path(file).suffix.lower() in SUPPORTED_IMAGE_TYPES):
+                if (not file.startswith('.') and Path(file).suffix.lower()[1:] in SUPPORTED_IMAGE_TYPES):
                     _result.append(Path.joinpath(paths[0], file))
             _result.sort()
     else:
