@@ -1,5 +1,5 @@
 # Image Joiner
-A simple python script for combining several images
+A lightweight Python script to seamlessly merge multiple images into a single output.
 ## How to use
 ```bash
 python main.py [file paths] [-h] [-d {v,h,both}] [-c CROP] [--dest DEST] [-n NAME]
